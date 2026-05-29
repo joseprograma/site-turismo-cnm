@@ -2,64 +2,6 @@ if ("scrollRestoration" in history) {
   history.scrollRestoration = "manual";
 }
 
-const SITE_LOGIN_KEY = "siteTurismoCnmUnlocked";
-const SITE_USERNAME = "zezinho sistema";
-const SITE_PASSWORD = "2026";
-const loginOverlay = document.getElementById("loginOverlay");
-const loginForm = document.getElementById("loginForm");
-const loginUsernameInput = document.getElementById("loginUsername");
-const loginPasswordInput = document.getElementById("loginPassword");
-const loginError = document.getElementById("loginError");
-
-function unlockSite() {
-  document.body.classList.remove("site-locked");
-  document.body.classList.add("site-unlocked");
-  sessionStorage.setItem(SITE_LOGIN_KEY, "true");
-}
-
-function lockSite() {
-  document.body.classList.add("site-locked");
-  document.body.classList.remove("site-unlocked");
-}
-
-if (sessionStorage.getItem(SITE_LOGIN_KEY) === "true") {
-  unlockSite();
-} else {
-  lockSite();
-}
-
-if (loginForm && loginUsernameInput && loginPasswordInput && loginError) {
-  [loginUsernameInput, loginPasswordInput].forEach((input) => {
-    input.addEventListener("input", () => {
-      loginError.hidden = true;
-    });
-  });
-
-  loginForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    const username = loginUsernameInput.value.trim().toLowerCase();
-    const password = loginPasswordInput.value.trim();
-    const isValidUser = username === SITE_USERNAME.toLowerCase() && password === SITE_PASSWORD;
-
-    if (!isValidUser) {
-      loginError.hidden = false;
-      loginPasswordInput.value = "";
-      loginPasswordInput.focus();
-      return;
-    }
-
-    loginError.hidden = true;
-    unlockSite();
-  });
-
-  if (document.body.classList.contains("site-locked")) {
-    window.requestAnimationFrame(() => {
-      loginUsernameInput.focus();
-    });
-  }
-}
-
 window.addEventListener("load", () => {
   window.scrollTo(0, 0);
 });
