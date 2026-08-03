@@ -2890,6 +2890,313 @@ main > section:not(.hero):not(.logo-wall) .container::before {
   margin-top: 16px;
 }
 
+.materia-festival-gallery {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.materia-festival-gallery img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(15, 107, 104, 0.12);
+  box-shadow: 0 14px 34px rgba(8, 22, 29, 0.1);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease;
+}
+
+.materia-festival-gallery img:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(8, 22, 29, 0.14);
+  filter: saturate(1.04);
+}
+
+.article-page .header {
+  position: sticky;
+}
+
+.article-hero {
+  padding-top: 150px;
+  padding-bottom: 28px;
+}
+
+.article-page main > section .container {
+  border-radius: 34px;
+}
+
+.article-hero-festival .container,
+.article-body .container {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 252, 0.95), rgba(246, 249, 244, 0.9)) !important;
+  border: 1px solid rgba(15, 107, 104, 0.1) !important;
+  box-shadow:
+    0 24px 60px rgba(8, 22, 29, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55) !important;
+}
+
+.article-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.22fr) minmax(340px, 0.78fr);
+  gap: 36px;
+  align-items: start;
+}
+
+.article-hero-copy {
+  padding: 18px 10px 8px;
+}
+
+.article-eyebrow {
+  margin: 12px 0 10px;
+  color: #7c8e87;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.article-hero h1 {
+  font-family: "Sora", "Manrope", Arial, sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4.8rem);
+  line-height: 1.04;
+  color: var(--primary-dark);
+  letter-spacing: -0.06em;
+  margin-bottom: 12px;
+  text-wrap: balance;
+}
+
+.article-hero-copy p {
+  max-width: 780px;
+  color: #60756f;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  margin-top: 18px;
+}
+
+.article-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.article-chip-row span {
+  padding: 12px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(15, 107, 104, 0.12);
+  color: #2d5b4e;
+  font-weight: 700;
+  box-shadow: 0 10px 22px rgba(8, 22, 29, 0.06);
+}
+
+.article-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 22px;
+  margin-top: 26px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(15, 107, 104, 0.12);
+  color: #6f817b;
+  font-size: 0.95rem;
+}
+
+.article-meta-row span {
+  position: relative;
+}
+
+.article-meta-row span::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--secondary), #e6a52c);
+  vertical-align: middle;
+}
+
+.article-hero-poster {
+  align-self: start;
+  margin: 0;
+  padding: 14px;
+  border-radius: 32px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(244, 248, 243, 0.92));
+  border: 1px solid rgba(15, 107, 104, 0.1);
+  box-shadow:
+    0 22px 50px rgba(8, 22, 29, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.article-hero-poster img {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  max-height: 640px;
+  object-fit: contain;
+  border-radius: 24px;
+  display: block;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(243, 247, 240, 0.96));
+  box-shadow: 0 16px 32px rgba(8, 22, 29, 0.1);
+}
+
+.article-hero-poster figcaption {
+  padding: 14px 6px 4px;
+  color: #6f817b;
+  font-size: 0.93rem;
+  line-height: 1.55;
+}
+
+.article-body {
+  padding-top: 10px;
+}
+
+.article-body-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(270px, 0.75fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.article-story-card {
+  padding: 34px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(15, 107, 104, 0.1);
+  box-shadow: 0 18px 44px rgba(8, 22, 29, 0.08);
+}
+
+.article-story-card p {
+  color: #60756f;
+  font-size: 1.02rem;
+  line-height: 1.85;
+  margin-bottom: 20px;
+}
+
+.article-lead {
+  margin-bottom: 24px;
+  padding: 22px 24px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(15, 107, 104, 0.08), rgba(255, 209, 102, 0.12));
+  border: 1px solid rgba(15, 107, 104, 0.1);
+  color: var(--primary-dark);
+  font-size: 1.15rem;
+  line-height: 1.75;
+  font-weight: 700;
+}
+
+.article-story-card h2 {
+  font-family: "Sora", "Manrope", Arial, sans-serif;
+  font-size: 2rem;
+  color: var(--primary-dark);
+  letter-spacing: -0.04em;
+  margin: 6px 0 16px;
+}
+
+.article-inline-image {
+  margin-top: 10px;
+  margin-bottom: 24px;
+}
+
+.article-inline-image img {
+  width: 100%;
+  height: auto;
+  min-height: 360px;
+  object-fit: cover;
+  border-radius: 24px;
+  display: block;
+}
+
+.article-quote {
+  margin: 0 0 24px;
+  padding: 24px 26px;
+  border-left: 4px solid #e6a52c;
+  border-radius: 0 22px 22px 0;
+  background: rgba(255, 250, 238, 0.9);
+  color: #335a52;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  font-weight: 600;
+}
+
+.article-service-panel {
+  position: sticky;
+  top: 110px;
+}
+
+.article-service-card {
+  padding: 24px 24px 18px;
+  border-radius: 28px;
+  background: linear-gradient(180deg, #165438, #114d36);
+  color: #f4f2e7;
+  box-shadow: 0 24px 46px rgba(17, 77, 54, 0.28);
+}
+
+.article-service-card h3 {
+  font-family: "Sora", "Manrope", Arial, sans-serif;
+  font-size: 2rem;
+  color: #f2ead7;
+  margin-bottom: 12px;
+  letter-spacing: -0.04em;
+}
+
+.article-service-card p {
+  color: rgba(255, 248, 232, 0.95);
+  font-size: 1.02rem;
+  line-height: 1.65;
+  margin-bottom: 10px;
+}
+
+.article-service-card strong {
+  color: #ffd266;
+}
+
+.article-home-link {
+  margin-top: 16px;
+}
+
+.article-back-link {
+  white-space: nowrap;
+}
+
+.article-share-line {
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(15, 107, 104, 0.08);
+  color: var(--primary-dark) !important;
+  font-size: 0.96rem !important;
+}
+
+.article-body .materia-festival {
+  margin-top: 28px;
+}
+
+.article-gallery-head {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.article-gallery-head h2 {
+  font-family: "Sora", "Manrope", Arial, sans-serif;
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  color: var(--primary-dark);
+  letter-spacing: -0.05em;
+  margin-bottom: 10px;
+}
+
+.article-gallery-head p {
+  max-width: 760px;
+  margin: 0 auto;
+  color: #6b7f79;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
 /* FAQ */
 .faq-list {
   max-width: 900px;
@@ -3424,6 +3731,9 @@ body.lightbox-open {
   .planejamento-strip,
   .eventos-grid,
   .materia-festival-grid,
+  .article-hero-grid,
+  .article-body-grid,
+  .materia-festival-gallery,
   .cultura-grid,
   .aldeia-hero,
   .aldeia-gallery,
@@ -3546,6 +3856,88 @@ body.lightbox-open {
     padding-bottom: 72px;
   }
 
+  .article-hero {
+    padding-top: 124px;
+  }
+
+  .article-hero h1 {
+    font-size: clamp(2.1rem, 11vw, 3.2rem);
+    line-height: 1.02;
+  }
+
+  .article-hero-copy p {
+    font-size: 1rem;
+  }
+
+  .article-story-card {
+    padding: 26px 20px;
+  }
+
+  .article-service-panel {
+    position: static;
+  }
+
+  .article-hero-poster img,
+  .article-inline-image img {
+    height: auto;
+    min-height: 0;
+    object-fit: contain;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.92);
+  }
+
+  .article-hero-poster img {
+    max-height: none;
+  }
+
+  .article-hero-poster {
+    padding: 12px;
+    border-radius: 24px;
+  }
+
+  .article-hero-poster figcaption {
+    padding: 12px 4px 2px;
+    font-size: 0.88rem;
+  }
+
+  .article-lead {
+    padding: 18px;
+    font-size: 1.02rem;
+  }
+
+  .article-story-card h2 {
+    font-size: 1.55rem;
+  }
+
+  .article-quote {
+    padding: 18px 18px 18px 20px;
+    font-size: 1rem;
+  }
+
+  .article-service-card {
+    padding: 20px 18px 14px;
+    border-radius: 22px;
+  }
+
+  .article-service-card h3 {
+    font-size: 1.65rem;
+  }
+
+  .article-gallery-head h2 {
+    font-size: 1.75rem;
+  }
+
+  .materia-festival-gallery {
+    gap: 14px;
+  }
+
+  .materia-festival-gallery img {
+    height: auto;
+    min-height: 0;
+    object-fit: contain;
+    border-radius: 18px;
+  }
+
   .logo-wall {
     padding: 18px 0 8px;
   }
@@ -3660,6 +4052,12 @@ body.lightbox-open {
     min-height: 320px;
   }
 
+  .materia-festival-gallery img {
+    height: auto;
+    min-height: 0;
+    object-fit: contain;
+  }
+
   .galeria-item.grande {
     grid-column: span 1;
   }
@@ -3690,6 +4088,31 @@ body.lightbox-open {
 
   .logo {
     width: 115px;
+  }
+
+  .article-back-link {
+    width: auto;
+    padding-inline: 16px;
+  }
+
+  .article-chip-row {
+    gap: 10px;
+  }
+
+  .article-meta-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .article-chip-row span {
+    width: 100%;
+    text-align: center;
+  }
+
+  .article-home-link,
+  .article-back-link {
+    width: 100%;
+    text-align: center;
   }
 
   .guia-galeria {
