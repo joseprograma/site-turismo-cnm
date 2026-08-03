@@ -2851,6 +2851,45 @@ main > section:not(.hero):not(.logo-wall) .container::before {
   margin-bottom: 12px;
 }
 
+/* MATERIA FESTIVAL */
+.materia-festival-grid {
+  display: grid;
+  grid-template-columns: 1.02fr 0.98fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.materia-festival-media,
+.materia-festival-copy {
+  border-radius: 28px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(15, 107, 104, 0.12);
+  box-shadow: 0 18px 40px rgba(8, 22, 29, 0.1);
+}
+
+.materia-festival-media img {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+.materia-festival-copy {
+  padding: 32px;
+}
+
+.materia-festival-copy p {
+  color: var(--gray);
+  font-size: 1.04rem;
+  line-height: 1.8;
+}
+
+.materia-festival-copy p + p {
+  margin-top: 16px;
+}
+
 /* FAQ */
 .faq-list {
   max-width: 900px;
@@ -3384,6 +3423,7 @@ body.lightbox-open {
   .roteiros-grid,
   .planejamento-strip,
   .eventos-grid,
+  .materia-festival-grid,
   .cultura-grid,
   .aldeia-hero,
   .aldeia-gallery,
@@ -3609,6 +3649,14 @@ body.lightbox-open {
   .aldeia-feature,
   .aldeia-feature img {
     height: 320px;
+    min-height: 320px;
+  }
+
+  .materia-festival-copy {
+    padding: 24px 20px;
+  }
+
+  .materia-festival-media img {
     min-height: 320px;
   }
 
