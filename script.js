@@ -875,3 +875,12 @@ if (electricTitleWrappers.length > 0 && !reducedMotionQuery.matches) {
     electricTitleWrappers.forEach((wrapper) => placeElectricSparks(wrapper));
   }, 1800);
 }
+
+// Esconde a legenda (nome do prefeito) enquanto o vídeo da aldeia toca
+document.querySelectorAll(".aldeia-video-player").forEach((player) => {
+  const video = player.querySelector("video");
+  if (!video) return;
+  video.addEventListener("play", () => player.classList.add("is-playing"));
+  video.addEventListener("pause", () => player.classList.remove("is-playing"));
+  video.addEventListener("ended", () => player.classList.remove("is-playing"));
+});
