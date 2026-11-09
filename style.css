@@ -2582,6 +2582,21 @@ main > section:not(.hero):not(.logo-wall) .container::before {
   transition: transform 0.65s ease, filter 0.65s ease;
 }
 
+.aldeia-gallery-header {
+  max-width: 720px;
+  margin: 48px 0 22px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(171, 99, 0, 0.2);
+}
+
+.aldeia-gallery-header h3 {
+  margin: 0 0 10px;
+}
+
+.aldeia-gallery-header p {
+  margin: 0;
+}
+
 .aldeia-gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
